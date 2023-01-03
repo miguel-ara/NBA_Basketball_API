@@ -34,7 +34,8 @@ You are now ready to proceed
 ### Files
 A brief explanation of the three .py files in this git repo will be done in the following paragraphs.
 
-#### -ETL_Celtics.py
+- __ETL_Celtics.py__
+
 __This is the only file that must be runned for the report and the prediction to be created.__ The two other .py files
 only contain functions and are used as libraries (if you try to run them nothing will happen), which are imported in the
 beginning of _ETL_Celtics.py_. This file uses an ETL (Extract Transform Load) to extract the data from the API with three get
@@ -46,12 +47,14 @@ Now the program calls the function _crear_reporte_GM()_ from the library _Crear_
 directory _archivos generados_, and the function _pronostica()_ from the library _Pronosticador.py_ to predict the result of the
 following match for the Boston Celtics.
 
-#### -Crear_pdf.py
+- __Crear_pdf.py__
+
 This file uses fpdf library to generate a pdf executive report for Brad Stevens (Boston Celtic´s GM) including charts and tables
 with all te stats obtained from the API that have been saved as images in the directory _imagenes_. The _crear_report_GM()_ is the only
 callable function in this library, which is called in _ETL_Celtics.py_ after generating the images.
 
-#### -Pronosticador.py
+- __Pronosticador.py__
+
 This file uses selenium library to do webscraping of this web https://www.sportytrader.es/ to obtain the betting odds for the next NBA
 games. The function _pronostica()_ creates a webdriver and searches for the odds in the web for the next Boston Celtics match. It also
 gives you a chance to predict the result of the next match for any other team that you wish. This function is called in _ETL_Celtics.py_
