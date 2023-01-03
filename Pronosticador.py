@@ -212,7 +212,7 @@ def pronostica(equipo: str):
     # ejemplo, el equipo inicial no juegue partidos próximamente
 
     website = 'https://www.sportytrader.es/'
-    path = 'C:/Users/Usuario/OneDrive - Universidad Pontificia Comillas/Documentos/Descargados/chromedriver.exe'
+    path = eval(open('config.txt').read())['path']
     driver = crear_driver(website, path)
     num = dirigirse_cuotas(driver)
     obtener_cuotas(driver, num, equipo)
