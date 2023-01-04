@@ -17,7 +17,7 @@ decompressed the zip file, you´ll need to remember the path of the file chromed
 
 Now you can download all the libraries by running the following command in your terminal.
 ```
-pip install -r requirements .txt
+pip install -r requirements.txt
 ```
 Moreover, you also need to edit the other txt file, _config.txt_, including your API key and the path of the executable file you have
 just downloaded (chromedriver.exe). To obtain the API key you need to create an account in the web https://sportsdata.io/ and
@@ -59,4 +59,3 @@ This file uses selenium library to do webscraping of this web https://www.sporty
 games. The function _pronostica()_ creates a webdriver and searches for the odds in the web for the next Boston Celtics match. It also
 gives you a chance to predict the result of the next match for any other team that you wish. This function is called in _ETL_Celtics.py_
 after the ETL process and the generating of the pdf, and with that, our program comes to an end.
-
